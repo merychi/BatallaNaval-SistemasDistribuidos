@@ -129,20 +129,20 @@ class Barco:
 # Clases específicas para cada tipo de barco
 class PortaAviones(Barco):
     def __init__(self):
-        super().__init__("PortaAviones", 5, sprite_path_h="cliente/sprites/portaaviones.png")
+        super().__init__("PortaAviones", 5, sprite_path_h="sprites/portaaviones.png")
 
 class Buque(Barco):
     def __init__(self):
-        super().__init__("Buque", 4, sprite_path_h="cliente/sprites/buque.png")
+        super().__init__("Buque", 4, sprite_path_h="sprites/buque.png")
 
 class Submarino(Barco):
     def __init__(self):
-        super().__init__("Submarino", 3, sprite_path_h="cliente/sprites/submarino.png")
+        super().__init__("Submarino", 3, sprite_path_h="sprites/submarino.png")
 
 class Crucero(Barco):
     def __init__(self):
-        super().__init__("Crucero", 3, sprite_path_h="cliente/sprites/crucero.png")
+        super().__init__("Crucero", 3, sprite_path_h="sprites/crucero.png")
 
 class Lancha(Barco):
     def __init__(self):
-        super().__init__("Lancha/Destructor", 2, sprite_path_h="cliente/sprites/lancha.png")
+        super().__init__("Lancha/Destructor", 2, sprite_path_h="sprites/lancha.png")

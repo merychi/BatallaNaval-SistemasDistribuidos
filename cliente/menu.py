@@ -72,7 +72,7 @@ def mostrar_como_jugar(screen, reloj, fuente_titulo, fuente_texto):
 
     # Intenta cargar la imagen de fondo; si falla usa un fondo sólido
     try:
-        imagen_fondo = pygame.image.load("cliente/sprites/BatallaNavalFondo.png")
+        imagen_fondo = pygame.image.load("sprites/BatallaNavalFondo.png")
         imagen_fondo = pygame.transform.scale(imagen_fondo, (ANCHO_VENTANA, ALTO_VENTANA))
     except Exception as e:
         print("No se pudo cargar el fondo:", e)
@@ -146,6 +146,8 @@ def bucle_menu_principal():
     global accion_menu_actual
     pygame.init()
     screen = pygame.display.set_mode((ANCHO_VENTANA, ALTO_VENTANA))
+    icono = pygame.image.load(ICONO)
+    pygame.display.set_icon(icono) 
     pygame.display.set_caption("Batalla Naval - Merry-am Blanco - Mariana Mora")
     reloj = pygame.time.Clock()
     
@@ -157,13 +159,13 @@ def bucle_menu_principal():
 
     # Intenta cargar imagen de fondo y escalarla
     try: 
-        imagen_cargada_desde_archivo = pygame.image.load("cliente/sprites/BatallaNavalFondo.png") 
+        imagen_cargada_desde_archivo = pygame.image.load("sprites/BatallaNavalFondo.png") 
         imagen_fondo = pygame.transform.scale(imagen_cargada_desde_archivo, (ANCHO_VENTANA, ALTO_VENTANA))
         print("Imagen de fondo cargada y escalada exitosamente.")
     except pygame.error as e:
         print(f"Error al cargar o escalar la imagen de fondo: {e}")
     except FileNotFoundError:
-        print(f"Archivo de imagen no encontrado en: {'cliente/sprites/BatallaNavalFondo.png'}")
+        print(f"Archivo de imagen no encontrado en: {'sprites/BatallaNavalFondo.png'}")
 
     # Carga la fuente para título, usa fuente por defecto si falla
     try:

@@ -26,5 +26,6 @@ COLOR_CIAN_CLARO = (173, 216, 230)
 COLOR_MORADO = (34, 32, 110)
 
 # Fuentes usadas en la interfaz
-FUENTE = "cliente/fonts/Pacifico-Regular.ttf"
-FUENTE2 = "cliente/fonts/Poppins-Italic.ttf"
+FUENTE = "fonts/Pacifico-Regular.ttf"
+FUENTE2 = "fonts/Poppins-Italic.ttf"
+ICONO = "sprites/icono.png"

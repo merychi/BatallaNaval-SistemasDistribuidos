@@ -7,6 +7,8 @@ class InterfazBatallaNaval:
     def __init__(self, tablero_jugador, tablero_oponente, lista_barcos):
         pygame.init()
         self.screen = pygame.display.set_mode((ANCHO_VENTANA, ALTO_VENTANA))  # Crear ventana
+        icono = pygame.image.load(ICONO)
+        pygame.display.set_icon(icono) 
         pygame.display.set_caption("Batalla Naval - Merry-am Blanco - Mariana Mora")
         self.reloj = pygame.time.Clock()
         self.tablero_jugador = tablero_jugador
@@ -16,7 +18,7 @@ class InterfazBatallaNaval:
         self.ultima_celda_disparada = None
         self.mensaje_estado = "Esperando..."
         self.ejecutando = True
-        self.fondo = pygame.image.load("cliente/sprites/BatallaNavalTableroFondo.png").convert()  # Fondo
+        self.fondo = pygame.image.load("sprites/BatallaNavalTableroFondo.png").convert()  # Fondo
 
     def dibujar(self):
         self.screen.blit(self.fondo, (0, 0))  # Dibujar fondo
