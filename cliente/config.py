@@ -28,4 +28,4 @@ COLOR_MORADO = (34, 32, 110)
 # Fuentes usadas en la interfaz
 FUENTE = "fonts/Pacifico-Regular.ttf"
 FUENTE2 = "fonts/Poppins-Italic.ttf"
-ICONO = "sprites/icono.png"
+ICONO = "sprites\icono.png"
