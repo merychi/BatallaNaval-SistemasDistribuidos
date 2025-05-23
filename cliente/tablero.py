@@ -18,19 +18,12 @@ def dibujar_tablero(screen, tablero, offset_x, offset_y, es_oponente=False):
             )
             pygame.draw.rect(screen, COLOR_GRIS_CLARO, rect, 1)  # Dibuja borde de la celda
             
-            # Color por defecto: agua
-            color_celda = COLOR_AGUA 
-            
             # Cambia color según el contenido de la celda y si es tablero propio o enemigo
-            if celda_val == "B" and not es_oponente: 
-                color_celda = COLOR_AGUA 
-            elif celda_val == "X":  # Impacto 
-                color_celda = COLOR_IMPACTO  # Rojo
-            elif celda_val == "M":  # Agua 
-                color_celda = COLOR_GRIS_CLARO  # Gris claro
-            
-            # Dibuja el interior de la celda con un margen para el borde
-            pygame.draw.rect(screen, color_celda, rect.inflate(-2, -2))
+            if celda_val == "X":
+                pygame.draw.rect(screen, COLOR_IMPACTO, rect.inflate(-2, -2))
+            elif celda_val == "M":
+                pygame.draw.rect(screen, COLOR_GRIS_CLARO, rect.inflate(-2, -2))
+
 
 def obtener_celda(pos, offset_x, offset_y):
     # Obtiene la fila y columna en el tablero según la posición del mouse y offsets

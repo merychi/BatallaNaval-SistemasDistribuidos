@@ -3,8 +3,8 @@ import sys
 from barcos import *
 from tablero import *
 from config import * 
-from interfaz import InterfazBatallaNaval 
-from menu import bucle_menu_principal
+from interfaz.interfaz import InterfazBatallaNaval 
+from interfaz.menu import bucle_menu_principal
 
 # Barcos y posiciones iniciales a colocar en el tablero (clase y coordenadas + orientación)
 FLOTA_A_COLOCAR = [
@@ -95,7 +95,7 @@ def client():
         sys.exit()
     cliente_socket.setblocking(False) # Volver a no bloqueante
 
-    interfaz.actualizar_mensaje("Tablero configurado. Esperando inicio...")
+    interfaz.actualizar_mensaje("Tablero configurado.\n Esperando inicio...")
 
     # Guarda las coordenadas del último disparo para actualizar la interfaz al recibir resultado
     coordenadas_ultimo_disparo_realizado = None 
@@ -109,7 +109,7 @@ def client():
         try:
             cliente_socket.send(f"{coords_str}\n".encode()) # Enviar coordenadas al servidor
             print(f"CLIENTE: Disparo enviado a {coords_str}")
-            interfaz.actualizar_mensaje("Disparo enviado. Esperando resultado...")
+            interfaz.actualizar_mensaje("Disparo enviado. \nEsperando resultado...")
             interfaz.set_turno(False) # Termina turno tras disparar
             coordenadas_ultimo_disparo_realizado = (fila, col)
         except socket.error as e:

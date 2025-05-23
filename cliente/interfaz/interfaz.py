@@ -10,6 +10,7 @@ class InterfazBatallaNaval:
         icono = pygame.image.load(ICONO)
         pygame.display.set_icon(icono) 
         pygame.display.set_caption("Batalla Naval - Merry-am Blanco - Mariana Mora")
+
         self.reloj = pygame.time.Clock()
         self.tablero_jugador = tablero_jugador
         self.tablero_oponente = tablero_oponente
@@ -18,7 +19,7 @@ class InterfazBatallaNaval:
         self.ultima_celda_disparada = None
         self.mensaje_estado = "Esperando..."
         self.ejecutando = True
-        self.fondo = pygame.image.load("sprites/BatallaNavalTableroFondo.png").convert()  # Fondo
+        self.fondo = pygame.image.load(FONDO_INTERFAZ).convert()  # Fondo
 
     def dibujar(self):
         self.screen.blit(self.fondo, (0, 0))  # Dibujar fondo
@@ -169,8 +170,10 @@ class InterfazBatallaNaval:
 
             # Mostrar texto de instrucciones
             fuente = pygame.font.Font(FUENTE, 28)
-            texto = fuente.render(f"Coloca el barco: {barco.nombre_tipo} (R para rotar)", True, COLOR_BLANCO)
-            self.screen.blit(texto, (OFFSET_X_MI_TABLERO, 10))
+            linea1 = fuente.render(f"Coloca el barco: {barco.nombre_tipo}", True, COLOR_BLANCO)
+            linea2 = fuente.render("(R para rotar)", True, COLOR_BLANCO)
+            self.screen.blit(linea1, (OFFSET_X_MI_TABLERO, 10))
+            self.screen.blit(linea2, (OFFSET_X_MI_TABLERO, 10 + linea1.get_height()))
             pygame.display.flip()
 
             # Manejar eventos para colocar barco o rotar

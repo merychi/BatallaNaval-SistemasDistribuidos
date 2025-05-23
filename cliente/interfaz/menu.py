@@ -72,7 +72,7 @@ def mostrar_como_jugar(screen, reloj, fuente_titulo, fuente_texto):
 
     # Intenta cargar la imagen de fondo; si falla usa un fondo sólido
     try:
-        imagen_fondo = pygame.image.load("sprites/BatallaNavalFondo.png")
+        imagen_fondo = pygame.image.load(FONDO_MENU)
         imagen_fondo = pygame.transform.scale(imagen_fondo, (ANCHO_VENTANA, ALTO_VENTANA))
     except Exception as e:
         print("No se pudo cargar el fondo:", e)
@@ -159,7 +159,7 @@ def bucle_menu_principal():
 
     # Intenta cargar imagen de fondo y escalarla
     try: 
-        imagen_cargada_desde_archivo = pygame.image.load("sprites/BatallaNavalFondo.png") 
+        imagen_cargada_desde_archivo = pygame.image.load(FONDO_MENU) 
         imagen_fondo = pygame.transform.scale(imagen_cargada_desde_archivo, (ANCHO_VENTANA, ALTO_VENTANA))
         print("Imagen de fondo cargada y escalada exitosamente.")
     except pygame.error as e:

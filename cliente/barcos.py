@@ -145,4 +145,4 @@ class Crucero(Barco):
 
 class Lancha(Barco):
     def __init__(self):
-        super().__init__("Lancha/Destructor", 2, sprite_path_h="sprites/lancha.png")
+        super().__init__("Lancha", 2, sprite_path_h="sprites/lancha.png")
