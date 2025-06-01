@@ -30,9 +30,28 @@ Este proyecto es una implementación juego **Batalla Naval**, desarrollado en Py
 
 ---
 
+### ¿Cómo probar el programa?
+
+1. Abre tu terminal.
+2. Elige el modo de juego que deseas probar: `1vs1` o `1vsn`.
+3. Sigue los siguientes pasos según el modo seleccionado (puedes reemplazar `1vs1` por `1vsn` en los comandos si es el caso):
+
+#### Terminal 1 (Servidor):
+  - cd 1vs1/servidor
+  - python server.py
+
+#### Terminal 2 (Cliente):
+  - cd 1vs1/cliente
+  - python client.py
+
+####  Terminal 3 (Cliente 2):
+Repite los pasos de la Terminal 2:
+  - cd 1vs1/cliente
+  - python client.py
+
+  
 ## Tecnologías Utilizadas
 
 - **Python 3**
 - **Sockets TCP/IP**
-- **Estructura modular**
 
